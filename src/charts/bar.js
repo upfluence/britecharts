@@ -14,7 +14,7 @@ define(function(require){
             xAxis, yAxis,
             svg,
             // extractors
-            getFrequency = function(d) { return d.frequency };
+            getFrequency = function(d) { return d.frequency; };
 
         function buildContainerGroups(){
             var container = svg.append('g').classed('container-group', true);
