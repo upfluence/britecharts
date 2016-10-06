@@ -39,6 +39,10 @@ module.exports = function(grunt) {
             return ':' + val;
         });
 
-        grunt.task.run(bumpTask, 'publish');
+        grunt.task.run(bumpTask, 'publish', 'push-dist');
+    });
+
+    grunt.registerTask('push-dist', 'Push ignored dist to master for release', function() {
+        shell.exec('./helpers/push_dist.sh');
     });
 };
